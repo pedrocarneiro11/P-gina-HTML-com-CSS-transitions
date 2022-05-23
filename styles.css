@@ -83,7 +83,7 @@ a:hover {
     align-items: center;
 }
 
-.checkbox {
+.checkbox-container .checkbox-wrapper .checkbox {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -123,9 +123,6 @@ a:hover {
     transform: rotate(0);
 }
 
-#toggle {
-    display: none;
-}
 
 /*alterações no .menu 
 antes: 
@@ -196,9 +193,7 @@ depois:
     font-size: 40px;
 }
 
-/* .checkbox .trace:nth-child(1) */
-/* ANIMAÇÃO DO MENU */ /* .checkbox-container .checkbox-wrapper .trace:nth-child(1) */
-/* ANIMAÇÃO DO MENU NÃO ESTÁ EXECUTANDO*/
+/*Animação do menu */
 
 #toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
@@ -218,3 +213,14 @@ depois:
     background-color: #06a166;
     top: 48px;
 }
+
+#toggle:checked + .checkbox {
+    background-color: white;    
+}
+
+#toggle:checked ~ .menu{
+    box-shadow: 100px 10px 10px 50vmax white;
+    z-index: 1;
+}
+
+/* 0px 0px 0px 100px */
