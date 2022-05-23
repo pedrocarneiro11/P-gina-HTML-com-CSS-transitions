@@ -83,7 +83,7 @@ a:hover {
     align-items: center;
 }
 
-.checkbox {
+.checkbox-container {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -96,13 +96,13 @@ a:hover {
     transition: 400ms ease-in-out 0;
 }
 
-.checkbox-container .checkbox-wrapper .trace {
+.header .checkbox-container .checkbox-wrapper .trace {
     width: 50px;
     height: 2px;
     background-color: #ffffff;
     position: absolute;
     border-radius: 4px;
-    transition: 0.5 ease-in-out;
+    transition: 0.5s ease-in-out 0;
 }
 
 .checkbox-container .checkbox-wrapper .trace:nth-child(1) {
@@ -127,11 +127,39 @@ a:hover {
     display: none;
 }
 
+/*alterações no .menu 
+antes: 
 .menu {
     position: absolute;
     top: 28px;
-    right: 25px;
-    background: red;
+    right: 30px;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #ffffff;
+    z-index: -1;
+    transition: 400ms ease-in-out 0; 
+}
+
+depois: 
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #ffffff;
+    z-index: -1;
+    transition: 400ms ease-in-out 0; 
+}*/
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: transparent;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -160,7 +188,7 @@ a:hover {
 }
 
 .menu-itens ul li{
-    margin: 10px 0px;
+    margin: 10px 10px;
     color: #2E1C2B;
     text-decoration: none;
     text-transform: uppercase;
@@ -168,25 +196,25 @@ a:hover {
     font-size: 40px;
 }
 
-/*Até aqui tudo ok*/  /* .checkbox .trace:nth-child(1) */
+/* .checkbox .trace:nth-child(1) */
 /* ANIMAÇÃO DO MENU */ /* .checkbox-container .checkbox-wrapper .trace:nth-child(1) */
-/* ANIMAÇÃO DO MENU NÃO ESTÁ FUNCIONANDO*/
+/* ANIMAÇÃO DO MENU NÃO ESTÁ EXECUTANDO*/
 
-#toggle:checked + .checkbox-container .checkbox-wrapper .trace:nth-child(1) {
+#toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
-    background-color: #2E1C2B;
+    background-color: #06a166;
     top: 47px;
 }
 
-#toggle:checked + .checkbox-container .checkbox-wrapper .trace:nth-child(2) {
+#toggle:checked + .checkbox .trace:nth-child(2) {
     transform: translateX(-100px);
     width: 30px;
     visibility: hidden;
     opacity: 0;
 }
 
-#toggle:checked + .checkbox-container .checkbox-wrapper .trace:nth-child(3) {
+#toggle:checked + .checkbox .trace:nth-child(3) {
     transform: rotate(-45deg);
-    background-color: #2E1C2B;
-    top: 40px;
+    background-color: #06a166;
+    top: 48px;
 }
